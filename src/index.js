@@ -57,7 +57,8 @@ app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res){
-    res.render('index', { title: 'Hey', message: 'Hello there!'});
+    var message = "Server running on port 8000 / IP to local network access: 192.168.43.194:8000"
+    res.render('index', { title: 'Hey', message:message});
 })
 
 
@@ -130,6 +131,7 @@ app.post('/delete', async (req, res) => {
 });
 
 app.listen(8000, function(){
-    console.log('Servidor rodando no link: http://localhost:8000');
+    var message = "Server running on port 8000 / IP to local network access: 192.168.43.194:8000"
+    console.log(message);
 });
 
